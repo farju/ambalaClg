@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="in.ace.pardeep.org.acev2.GalleryAceActivity">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_dark">
+
+            <TextView
+                android:id="@+id/textViewFees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"/>
+
+
+
+            <Button
+                android:id="@+id/backButtonFees"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:background="@drawable/leftnew"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="5dp"/>
+
+        </FrameLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/feesProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/linearLayout" />
+    <ImageButton
+        android:id="@+id/buttonForRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/restart"
+        android:background="@android:color/white"/>
+    <WebView
+        android:id="@+id/webViewGallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </WebView>
+
+</LinearLayout>

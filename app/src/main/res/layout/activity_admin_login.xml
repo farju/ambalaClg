@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bckgg"
+    tools:context="in.ace.pardeep.org.acev2.AdminLogin">
+    <FrameLayout
+        android:id="@+id/frameAdminPortal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linearLayoutAdminLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:background="@drawable/logo"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/imageUserStudentPortal"
+                        android:layout_marginTop="60dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/people"
+                        />
+
+                    <EditText
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/editTextUserNameAdmin"
+                        android:layout_marginTop="28dp"
+                        android:layout_width="200dp"
+                        android:hint="@string/userName"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:inputType="textEmailAddress"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imageUserStudentPortal"
+                        android:layout_toEndOf="@+id/imageUserStudentPortal"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imagePasswordStudentPortal"
+                        android:background="@drawable/computer"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="5dp" />
+                    <EditText
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:id="@+id/editTextPasswordAdmin"
+                        android:layout_width="200dp"
+                        android:inputType="textPassword"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:hint="Password"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imagePasswordStudentPortal"
+                        android:layout_toEndOf="@+id/imagePasswordStudentPortal"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/submitButtonAdminLogIn"
+                    android:layout_width="280dp"
+                    android:layout_height="35dp"
+                    android:text="Sign in"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="80dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>
+

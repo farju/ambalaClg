@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bckgg"
+    tools:context="in.ace.pardeep.org.acev2.StudentFormOnLogin">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_marginRight="8dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/rightarr"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/linearlayoutStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/studentImage"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:src="@drawable/user"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:id="@+id/studentImageButtonSelect"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/custombutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/studentImage"
+            android:layout_alignStart="@+id/studentImage" />
+
+    </RelativeLayout>
+    <EditText
+        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:id="@+id/editTextUserName" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

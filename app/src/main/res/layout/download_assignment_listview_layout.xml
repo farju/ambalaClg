@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/framelayoutlistviewassignments"
+        android:layout_margin="15dp">
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_file"
+            android:id="@+id/imageViewListDownload"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewListDate"
+                android:text="Text"
+                android:textSize="18sp"
+                android:layout_alignTop="@+id/dowmloadButtonlistview"
+                android:layout_toRightOf="@+id/imageViewListDownload"
+                android:layout_toEndOf="@+id/imageViewListDownload">
+
+            </TextView>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewListSender"
+            android:text="Text"
+            android:textSize="18sp"
+                android:layout_alignBottom="@+id/imageViewListDownload"
+                android:layout_alignLeft="@+id/textViewListDate"
+                android:layout_alignStart="@+id/textViewListDate" />
+        <ImageButton
+            android:id="@+id/dowmloadButtonlistview"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_down"/>
+        <ImageButton
+            android:id="@+id/expandButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/expand"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:layout_alignTop="@+id/textViewListSender"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:text="extra text"
+            android:id="@+id/descriptionlistview"/>
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/upp"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+</LinearLayout>

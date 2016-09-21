@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="in.ace.pardeep.org.acev2.StudentProfileFragment">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_blue_dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Profile"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/backButtonProfile"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:background="@drawable/leftnew"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"/>
+    </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/studentImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/user"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@android:color/holo_blue_light"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/studentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="User Name"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+        <TextView
+            android:id="@+id/textViewUser"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Profile"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/textViewUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

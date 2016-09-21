@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="in.ace.pardeep.org.acev2.NoteUpdateFacultyFrag">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:background="@drawable/leftnew"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"/>
+    </FrameLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Upload Note/Questions/Any Text"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"/>
+        <Spinner
+            android:id="@+id/spinnerUploadNote"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/border">
+
+        </Spinner>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/editTextTitle"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/border"
+            android:padding="5dp"
+            android:autoText="true"
+            android:autoLink="all"
+            android:gravity="start"
+            android:hint="Enter Title/Subject Here.."
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editTextUploadNote"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="Write Here..."
+            android:gravity="start"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            android:inputType="textCapSentences|textMultiLine"
+            android:autoLink="all"
+            android:autoText="true"
+            android:clickable="true"
+            android:editable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/border"
+            />
+        </FrameLayout>
+        <Button
+            android:id="@+id/buttonUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Upload"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_signin"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

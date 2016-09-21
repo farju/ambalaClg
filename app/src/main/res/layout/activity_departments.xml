@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frameLayoutDepartment"
+    android:background="@android:color/white"
+    tools:context="in.ace.pardeep.org.acev2.Departments">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/primary_dark">
+            <TextView
+                android:id="@+id/textViewUpperActionDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Department"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:background="@drawable/leftnew"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="5dp"/>
+        </FrameLayout>
+    <WebView
+        android:id="@+id/webViewDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </WebView>
+        <TextView
+            android:id="@+id/textViewLoad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Loading...."/>
+    </LinearLayout>
+</FrameLayout>

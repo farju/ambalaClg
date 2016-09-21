@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "444621533780",
+    "firebase_url": "https://acev2-8e23d.firebaseio.com",
+    "project_id": "acev2-8e23d",
+    "storage_bucket": "acev2-8e23d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444621533780:android:653160ca2af6b3c5",
+        "android_client_info": {
+          "package_name": "in.ace.pardeep.org.acev2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444621533780-0ffl0dp2c3jishqt07psjqscg287u8h5.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "444621533780-ca7bih11srm46cut3or0kcd8e1uove18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqPSk_VwAXEmLk_dp7aY3lYquwPijKa8A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

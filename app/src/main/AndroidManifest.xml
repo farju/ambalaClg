@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.ace.pardeep.org.acev2" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="in.ace.pardeep.org.acev2.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="in.ace.pardeep.org.acev2.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ACE"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name=".RegisterationIntentService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".MyInstanceIdListener"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".GcmMessageHandler"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="Ace"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeScreen"
+            android:label="" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StudentPortal"
+            android:label="@string/title_activity_student_portal"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FacultyPortal"
+            android:label="@string/title_activity_faculty_portal"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AboutUs"
+            android:label="About Us" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="in.ace.pardeep.org.acev2" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ApplyOnline"
+            android:label="@string/title_activity_apply_online" >
+        </activity>
+        <activity
+            android:name=".DetailActivityAboutUs"
+            android:label="@string/title_activity_detail_activity_about_us" >
+        </activity>
+        <activity
+            android:name=".CoursesOffered"
+            android:label="@string/title_activity_courses_offered" >
+        </activity>
+        <activity
+            android:name=".StudentProfile"
+            android:label="Student Portal" >
+        </activity>
+        <activity
+            android:name=".AdminLogin"
+            android:label="@string/title_activity_admin_login"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name=".AdminManage"
+            android:label="Update Data" >
+        </activity>
+        <activity
+            android:name=".HistoryAceFragment"
+            android:label=" " />
+        <activity
+            android:name=".AboutUsWebView"
+            android:label="@string/title_activity_about_us_web_view" >
+        </activity>
+        <activity
+            android:name=".Departments"
+            android:label="@string/title_activity_departments" >
+        </activity>
+        <activity
+            android:name=".ImageShowActivity"
+            android:label="@string/title_activity_image_show" >
+        </activity>
+        <activity
+            android:name=".AcademicCalender"
+            android:label="@string/title_activity_academic_calender" >
+        </activity>
+        <activity
+            android:name=".FeesActivity"
+            android:label="" >
+        </activity>
+        <activity
+            android:name=".FacultyProfile"
+            android:label="DashBoard" >
+        </activity>
+        <activity
+            android:name=".Developers"
+            android:label="@string/title_activity_developers" >
+        </activity>
+        <activity
+            android:name=".AdmissionsSubActivities"
+            android:label="@string/title_activity_admissions_sub_activities" >
+        </activity>
+        <activity
+            android:name=".GalleryAceActivity"
+            android:label="@string/title_activity_gallery_ace" >
+        </activity>
+    </application>
+
+</manifest>

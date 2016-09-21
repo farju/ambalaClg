@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:id="@+id/imageViewappdemo"
+            android:src="@drawable/first_screen"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+</ScrollView>
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/skipButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:onClick="onSaveButtonClick"
+            android:text="Skip &amp; Continue!"/>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"/>
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_weight="1"
+            android:onClick="onCancelButtonClick"
+            android:text="Next"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomsecondlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        >
+    <CheckBox
+        android:id="@+id/checkboxViewDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Don't show Again!"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+
+        />
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_signin"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Continue"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        />
+</LinearLayout>
+</RelativeLayout>

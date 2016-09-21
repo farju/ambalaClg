@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">AceV2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_student_portal">StudentPortal</string>
+    <string name="title_activity_faculty_portal">FacultyPortal</string>
+    <string name="title_activity_about_us">AboutUs</string>
+
+
+    <string name="gcmProject_defaultSenderId">444621533780</string>
+    <string name="title_activity_apply_online">ApplyOnline</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_detail_about_us_list">DetailAboutUsList</string>
+    <string name="title_activity_detail_activity_about_us">DetailActivityAboutUs</string>
+    <string name="aboutUs"><b><h3>About Us</h3>h3></b></string>
+    <string name="userName"><b>Username</b></string>
+    <string name="footer"><b>&#169; ACE 2016</b></string>
+    <string name="title_activity_courses_offered">CoursesOffered</string>
+    <string name="title_activity_student_profile">StudentProfile</string>
+    <string name="title_activity_admin_login">AdminLogin</string>
+    <string name="title_activity_admin_manage">AdminManage</string>
+    <string name="title_activity_about_us_web_view">AboutUsWebView</string>
+    <string name="title_activity_departments">Departments</string>
+
+
+
+    <string name="library_text">
+    </string>
+    <string name="title_activity_image_show">ImageShowActivity</string>
+    <string name="title_activity_academic_calender">AcademicCalender</string>
+    <string name="title_activity_faculty_profile">FacultyProfile</string>
+    <string name="title_activity_developers">Developers</string>
+
+    <!-- About Us Content It remains stationary   -->
+
+    <string name="aboutpardeep"></string>
+    <string name="contact">Ambala College Of Engineering and Applied Research Devsthali,Ambala Cantt - Jagadhari Road, P.O. Sambhalkha Ambala,Haryana,India. Pin - 133 101.</string>
+    <string name="contact_no">0171-2821833, 9996815503, 9355745503, 9896266033 </string>
+    <string name="title_activity_admissions_sub_activities">AdmissionsSubActivities</string>
+    <string name="title_activity_gallery_ace">GalleryAceActivity</string>
+</resources>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayoutHomeScreen"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gcolor"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    tools:context="in.codroid.ace.HomeScreen">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registrationProgressBar" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:background="@color/primary_dark"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <Button
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/ic_menu"
+                    android:id="@+id/title_bar_left_menu"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/textViewHomeActionBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="ACE"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    tools:ignore="HardcodedText" />
+                <Button
+                    android:id="@+id/refreshButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="100dp"
+                    android:background="@drawable/ic_refresh"/>
+                <Button
+                    android:id="@+id/rightMenuButton"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="60dp"
+                    android:background="@drawable/rightmenu"
+                    android:layout_gravity="right|center_vertical"/>
+                <Button
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/ic_menu"
+                    android:id="@+id/action_bar_right_menu"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/main_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:background="@color/gcolor"
+                    android:layout_height="match_parent"
+                    android:id="@+id/layout_top"
+                    tools:ignore="ScrollViewSize">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/ace_image"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/ace_ic_bckg"
+                        />
+
+                    <RelativeLayout
+                        android:background="@android:color/holo_blue_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@android:color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Placement"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_margin="20dp"
+                            tools:ignore="HardcodedText" />
+                        <Button
+                            android:id="@+id/placementMoreButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/button_selector"
+                            android:text="MORE"
+                            android:textColor="@android:color/white"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:orientation="vertical">
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:id="@+id/progressPlacement"/>
+                        <TextView
+                            android:id="@+id/textViewPlacementListConnectionError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Connection Error..."
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"
+                            tools:ignore="HardcodedText" />
+                        <Button
+                            android:id="@+id/buttonPlacementListConnectionError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Retry"
+                            android:layout_gravity="center"
+                            tools:ignore="HardcodedText" />
+                        <ListView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/listViewPlacement"
+                            tools:ignore="NestedScrolling">
+                        </ListView>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:background="@android:color/holo_blue_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@android:color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Notices"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_margin="20dp"
+                            tools:ignore="HardcodedText" />
+                        <Button
+                            android:id="@+id/noticeMoreButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/button_selector"
+                            android:text="MORE"
+                            android:textColor="@android:color/white"
+                            tools:ignore="HardcodedText,RtlHardcoded" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:orientation="vertical">
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:id="@+id/progressNotices"/>
+                        <TextView
+                        android:id="@+id/textViewNoticeListConnectionError"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Connection Error..."
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+                            tools:ignore="HardcodedText" />
+                        <Button
+                            android:id="@+id/buttonNoticeListConnectionError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Retry"
+                            android:layout_gravity="center"
+                            tools:ignore="HardcodedText" />
+                        <ListView
+                            android:id="@+id/listViewNotices"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            tools:ignore="NestedScrolling">
+
+                        </ListView>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:background="@android:color/holo_blue_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView
+                            android:textColor="@android:color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="Events"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_margin="20dp"
+                            tools:ignore="HardcodedText" />
+                        <Button
+                            android:id="@+id/eventsMoreButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/button_selector"
+                            android:text="MORE"
+                            android:textColor="@android:color/white"
+                            tools:ignore="HardcodedText" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                        <ProgressBar
+                            style="@style/Widget.AppCompat.ProgressBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:id="@+id/progressEvents"/>
+                        <TextView
+                            android:id="@+id/textViewEventsConnectionError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Connection Error..."
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"
+                            tools:ignore="HardcodedText" />
+                        <ImageView
+                            android:src="@drawable/ace_ic_event"
+                            android:id="@+id/imageViewHomeScreen"
+                            android:background="@android:color/darker_gray"
+                            android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:layout_height="200dp" />
+                        <Button
+
+                            android:background="@drawable/ic_next"
+                            android:layout_width="28dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/buttonImageHome"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="5dp"
+                            android:layout_centerInParent="true"/>
+                        <Button
+                            android:layout_width="28dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/ic_previous"
+                            android:layout_alignParentLeft="true"
+                            android:layout_margin="5dp"
+                            android:id="@+id/imageButtonLeft"
+                            android:layout_centerInParent="true"
+                            />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:background="@color/primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="@string/footer"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+
+            </ScrollView>
+            </FrameLayout>
+
+        </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingButtonHomeScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/plusplus"
+        cardview:backgroundTint="@android:color/holo_blue_light">
+
+    </android.support.design.widget.FloatingActionButton>
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+

@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_height="match_parent" tools:context="in.ace.pardeep.org.acev2.LibraryFragment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Working Hrs. : 9:00AM to 6:00PM"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="The computerized Library at ACE is well equipped and constantly expanding. It is housed in a 12,000 square feet facility with a mezzanine floor. Sh. H. K. Das Memorial Reading Room is attached to the library. It is air conditioned and has separate closed cabins for group discussions. The annual budget for library is Rs. 10 lakhs per year which has resulted in a collection of more than 23,500 books in less than 8 years. The college has additional library facilities both in the girls' and boys' hostels. The library remains open even after college hours for the convenience of the students.
+    "
+        />
+</LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply Online"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"/>
+
+
+
+        <Button
+            android:id="@+id/backButtonApply"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:background="@drawable/leftnew"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"/>
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/editTextStudentApplyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Student Name"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:inputType="textCapSentences"
+                    android:background="@drawable/border"
+                    />
+
+
+                <!--<EditText
+                    android:id="@+id/DOB"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:layout_height="40dp"
+                    android:hint="D.O.B"
+                    android:inputType="number|textUri"
+                    android:background="@drawable/border"
+                    />-->
+
+                <EditText
+                    android:id="@+id/marks"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:layout_height="45dp"
+                    android:hint="12th marks"
+                    android:inputType="number"
+                    android:background="@drawable/border"
+                    />
+                <Spinner
+                    android:id="@+id/applyOnlineAce"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border">
+
+                </Spinner>
+                <EditText
+                    android:id="@+id/jee"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:layout_height="45dp"
+                    android:hint="JEE Rank"
+                    android:inputType="number"
+                    android:background="@drawable/border"
+                    />
+                <EditText
+                    android:id="@+id/email_address"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:layout_height="45dp"
+                    android:hint="Email Id"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/border"/>
+
+                <EditText
+                    android:id="@+id/contact_no"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:layout_height="45dp"
+                    android:hint="contact number"
+                    android:inputType="number"
+                    android:background="@drawable/border"
+                    />
+                <FrameLayout
+                    android:background="@drawable/border"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="50dp">
+                    <EditText
+                        android:id="@+id/editTextdob"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        android:gravity="center_vertical"
+                        android:hint="D.O.B"/>
+                    <Button
+                        android:id="@+id/buttonCalenderPicker"
+                        android:layout_gravity="end"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/ic_calender"
+                        />
+                </FrameLayout>
+                <EditText
+                    android:id="@+id/postal_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:hint="postal_address"
+                    android:inputType="textPostalAddress|textCapSentences|textMultiLine"
+                    android:background="@drawable/border"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:id="@+id/submit"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@android:color/black"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</RelativeLayout>

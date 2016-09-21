@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/profile"
+    android:icon="@drawable/userprof"
+    android:title="Profile"></item>
+    <item
+        android:id="@+id/download"
+        android:icon="@drawable/ic_down"
+        android:title="Downloads"></item>
+    <item
+        android:id="@+id/record"
+        android:title="Records"></item>
+    <item
+        android:id="@+id/activity"
+        android:title="Activities">
+
+    </item>
+    <group
+        android:id="@+id/group"
+        android:menuCategory="secondary"
+        >
+        <item
+            android:id="@+id/upload"
+            android:icon="@drawable/cloud"
+            android:title="Upload"></item>
+        <item
+            android:id="@+id/query"
+            android:title="Any Query?"
+            ></item>
+        <item
+            android:id="@+id/faq"
+            android:title="FAQ"></item>
+    </group>
+</menu>
