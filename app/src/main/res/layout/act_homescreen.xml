@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayoutHomeScreen"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gcolor"
+        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+        tools:context="in.codroid.ace.HomeScreen">
+        <LinearLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:background="@color/primary_dark"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <Button
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/ic_menu"
+                android:id="@+id/title_bar_left_menu"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/textViewHomeActionBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:text="ACE"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText" />
+            <Button
+                android:id="@+id/refreshButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/ic_refresh"/>
+            <Button
+                android:id="@+id/rightMenuButton"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/rightmenu"
+                android:layout_gravity="right|center_vertical"/>
+            <Button
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/ic_menu"
+                android:id="@+id/action_bar_right_menu"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+        </FrameLayout>
+        </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/ace_image"
+        android:scaleType="fitXY"
+        android:background="@drawable/ace_ic_bckg"
+        />
+
+</LinearLayout>
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>

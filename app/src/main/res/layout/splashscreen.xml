@@ -12,10 +12,9 @@
         android:layout_marginBottom="10dp"
         android:id="@+id/linearLayout">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/acelogobeta"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/logo"
             />
         <!--<TextView
             android:layout_width="match_parent"
@@ -26,12 +25,12 @@
             android:textColor="@android:color/white"
             android:textSize="35sp"/>-->
         <TextView
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:gravity="center"
-            android:text="Ambala College Of Engineering\n &amp; Applied Research"
+            android:text="Ambala College Of Engineering\n And Applied Research"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             />
