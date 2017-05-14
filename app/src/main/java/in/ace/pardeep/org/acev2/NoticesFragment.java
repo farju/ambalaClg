@@ -76,7 +76,7 @@ public class NoticesFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
     private void sendRequestToServer() {
        // progressBar=(ProgressBar)view.findViewById(R.id.noticeProgressBar);
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, requestUrl, new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.GET,ScriptUrl.getNoticeUrl(), new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
               //  progressBar.setVisibility(View.GONE);

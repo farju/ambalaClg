@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="in.ace.pardeep.org.acev2" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -18,7 +19,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="ACE"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        tools:replace="android:label" >
         <service
             android:name=".RegisterationIntentService"
             android:exported="false" >
@@ -163,6 +165,30 @@
         <activity
             android:name=".GalleryAceActivity"
             android:label="@string/title_activity_gallery_ace" >
+        </activity>
+        <activity
+            android:name=".Placements"
+            android:label="@string/title_activity_placements" >
+        </activity>
+        <activity
+            android:name=".Events"
+            android:label="@string/title_activity_events" >
+        </activity>
+        <activity
+            android:name=".News"
+            android:label="@string/title_activity_news" >
+        </activity>
+        <activity
+            android:name=".Notices"
+            android:label="@string/title_activity_notices" >
+        </activity>
+        <activity
+            android:name=".NotificationShowingActivity"
+            android:label="@string/title_activity_notification_showing" >
+        </activity>
+        <activity
+            android:name=".ImportantLinks"
+            android:label="@string/title_activity_important_links" >
         </activity>
     </application>
 

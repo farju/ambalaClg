@@ -251,8 +251,8 @@ System.out.println(jobCancel);
     private void showResponse(JSONObject jsonObject) {
         System.out.println(jsonObject);
         AlertDialog.Builder alertResp=new AlertDialog.Builder(this);
-        alertResp.setTitle("Form Submission");
-        alertResp.setMessage("Dear " + editName.getText().toString() + "\nThanks for submit form our team getting your form and contact you soon");
+        alertResp.setTitle("Submitting Form..");
+        alertResp.setMessage("Dear " + editName.getText().toString() + "\nThanks for submitting the form.Our team has recieved your form and will contact you soon.\n");
         alertResp.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

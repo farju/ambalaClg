@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent" tools:context="in.ace.pardeep.org.acev2.NoticesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/primary_dark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notices"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:background="@drawable/leftnew"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="5dp"/>
+        </FrameLayout>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefreshNoticeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical">
+            <ListView
+                android:id="@+id/noticeFragmentListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

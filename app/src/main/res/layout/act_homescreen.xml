@@ -2,7 +2,8 @@
 <android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/coordinatorLayoutHomeScreen"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:htext="http://schemas.android.com/apk/res-auto">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -10,9 +11,10 @@
         android:background="@color/gcolor"
         xmlns:cardview="http://schemas.android.com/apk/res-auto"
         tools:context="in.codroid.ace.HomeScreen">
-        <LinearLayout
+
+            <LinearLayout
             android:orientation="vertical" android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -69,15 +71,171 @@
 
         </FrameLayout>
         </LinearLayout>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <FrameLayout
+                android:id="@+id/main_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/ace_image"
-        android:scaleType="fitXY"
-        android:background="@drawable/ace_ic_bckg"
-        />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            <ViewFlipper
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/viewFlip"
+                                android:autoStart="true"
+                                android:flipInterval="2500"
+                                >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:id="@+id/ace_image"
+                                android:scaleType="fitXY"
+                                android:background="@drawable/ace_ic_bckg"
+                                />
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="220dp"
+                                    android:id="@+id/ace_image1"
+                                    android:scaleType="fitXY"
+                                    android:background="@drawable/ace_ic_event"
+                                    />
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="220dp"
+                                    android:id="@+id/ace_image2"
+                                    android:scaleType="fitXY"
+                                    android:background="@drawable/collage"
+                                    />
+                            </ViewFlipper>
+                            <com.hanks.htextview.HTextView
+                                android:id="@+id/text"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="15sp"
+                                htext:animateType="scale"
+                                android:layout_alignBottom="@+id/viewFlip"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+                            </RelativeLayout>
 
+                            <in.ace.pardeep.org.acev2.ExpandableHeightGridView
+                                android:id="@+id/gridViewHomeScreen"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:numColumns="2"
+                                android:stretchMode="columnWidth"
+                                android:isScrollContainer="false">
+
+                            </in.ace.pardeep.org.acev2.ExpandableHeightGridView>
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/white">
+                                <RelativeLayout
+                                    android:background="@android:color/holo_blue_light"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:textColor="@android:color/white"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:text="Important Links"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:layout_margin="20dp"
+                                        tools:ignore="HardcodedText" />
+                                    <Button
+                                        android:id="@+id/noticeMoreButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="8dp"
+                                        android:background="@drawable/button_selector"
+                                        android:text="MORE"
+                                        android:textColor="@android:color/white"
+                                        tools:ignore="HardcodedText,RtlHardcoded" />
+                                </RelativeLayout>
+                                </FrameLayout>
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="200dp"
+                                android:orientation="vertical">
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/progressNotices"/>
+                                <TextView
+                                    android:id="@+id/textViewNoticeListConnectionError"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Connection Error..."
+                                    android:textSize="20sp"
+                                    android:layout_gravity="center"
+                                    android:textColor="@android:color/black"
+                                    tools:ignore="HardcodedText" />
+                                <Button
+                                    android:id="@+id/buttonNoticeListConnectionError"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Retry"
+                                    android:layout_gravity="center"
+                                    tools:ignore="HardcodedText" />
+                                <ListView
+                                    android:id="@+id/listViewImpLinks"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    tools:ignore="NestedScrolling">
+
+                                </ListView>
+                            </LinearLayout>
+
+                            <TextView
+                                android:background="@color/primary"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:text="@string/footer"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textColor="@android:color/white"/>
+                        </LinearLayout>
+
+
+
+            </FrameLayout>
+            </LinearLayout>
+                </ScrollView>
 </LinearLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingButtonHomeScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/plusplus"
+            cardview:backgroundTint="@android:color/holo_blue_light">
+
+        </android.support.design.widget.FloatingActionButton>
         </RelativeLayout>
     </android.support.design.widget.CoordinatorLayout>

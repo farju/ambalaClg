@@ -6,9 +6,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -27,9 +27,9 @@ import java.io.InputStreamReader;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PlacementFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class PlacementFragment extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
-    private View view;
+    private View view=null;
     private TextView textView;
     private ListView listView;
     private SwipeRefreshLayout swipeRefreshLayout;
@@ -41,21 +41,25 @@ public class PlacementFragment extends Fragment implements SwipeRefreshLayout.On
         // Required empty public constructor
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        view= inflater.inflate(R.layout.fragment_placement, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_placement);
+        sharedPreferences=this.getSharedPreferences("placement", Context.MODE_PRIVATE);
 
-        //shared preferences
-        sharedPreferences=getActivity().getSharedPreferences("placement", Context.MODE_PRIVATE);
+        Button buttonToBack=(Button)findViewById(R.id.backButton);
+        buttonToBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
-        textView=(TextView)view.findViewById(R.id.textViewPlacementFragment);
+        textView=(TextView)findViewById(R.id.textViewPlacementFragment);
         textView.setVisibility(View.GONE);
-        listView=(ListView)view.findViewById(R.id.placementFragmentListView);
+        listView=(ListView)findViewById(R.id.placementFragmentListView);
         listView.setVisibility(View.GONE);
-        swipeRefreshLayout=(SwipeRefreshLayout)view.findViewById(R.id.pullToRefreshPlacementFragment);
+        swipeRefreshLayout=(SwipeRefreshLayout)findViewById(R.id.pullToRefreshPlacementFragment);
         swipeRefreshLayout.setOnRefreshListener(this);
         sendRequestToServer();
         swipeRefreshLayout.post(new Runnable() {
@@ -65,8 +69,8 @@ public class PlacementFragment extends Fragment implements SwipeRefreshLayout.On
                 sendRequestToServer();
             }
         });
-        return view;
     }
+
 
     private void sendRequestToServer() {
         String url=ScriptUrl.placementUrl;
@@ -112,7 +116,7 @@ public class PlacementFragment extends Fragment implements SwipeRefreshLayout.On
                 }
             }
         });
-        RequestQueue requestQueue= Volley.newRequestQueue(getActivity());
+        RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
 
@@ -120,7 +124,7 @@ public class PlacementFragment extends Fragment implements SwipeRefreshLayout.On
             String readData=null;
         try {
             String res = null;
-            InputStream inputStream=getActivity().openFileInput(Files.fileName);
+            InputStream inputStream=this.openFileInput(Files.fileName);
             System.out.println("file read");
             if(inputStream!=null) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);

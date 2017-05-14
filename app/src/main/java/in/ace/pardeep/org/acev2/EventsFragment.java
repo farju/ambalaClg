@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +31,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment extends Fragment {
+public class EventsFragment extends AppCompatActivity {
 
     private static ListView listView;
     View eventView;
@@ -49,20 +49,24 @@ public class EventsFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_events);
+        textview=(TextView)findViewById(R.id.errorTextView);
+        listView=(ListView)findViewById(R.id.listViewEvents);
 
-        eventView=inflater.inflate(R.layout.fragment_events, container, false);
-        textview=(TextView)eventView.findViewById(R.id.errorTextView);
-        listView=(ListView)eventView.findViewById(R.id.listViewEvents);
+        swipeRefreshLayout=(SwipeRefreshLayout)findViewById(R.id.pullToRefreshEventsFragment);
 
-        swipeRefreshLayout=(SwipeRefreshLayout)eventView.findViewById(R.id.pullToRefreshEventsFragment);
+        Button buttonToBack=(Button)findViewById(R.id.backButton);
+        buttonToBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
-
-       // sendRequestToServer();
+        // sendRequestToServer();
         swipeRefreshLayout.setRefreshing(true);
         refreshContent();
 
@@ -78,8 +82,8 @@ public class EventsFragment extends Fragment {
 
 
 
-        return eventView;
     }
+
 
     private void refreshContent() {
         new Handler().post(new Runnable() {
@@ -96,7 +100,7 @@ public class EventsFragment extends Fragment {
 
     private void sendRequestToServer() {
 
-        final ProgressDialog progressDialog=new ProgressDialog(getActivity());
+        final ProgressDialog progressDialog=new ProgressDialog(this);
         progressDialog.setMessage("Fetching..");
         progressDialog.show();
 
@@ -121,9 +125,10 @@ public class EventsFragment extends Fragment {
                 if(arrayList!=null) {
                     if (arrayList.size() > 0) {
                         textview.setVisibility(View.GONE);
-                        Toast.makeText(getActivity(), "Connection Error!", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(this,"Connection Error!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EventsFragment.this, "Network Problem!", Toast.LENGTH_SHORT).show();
                         if(listView!=null){
-                            eventsListViewAdapter=new EventsListViewAdapter(getActivity());
+                            eventsListViewAdapter=new EventsListViewAdapter(getApplicationContext());
                             eventsListViewAdapter.setContentArrayList(arrayList);
                             listView.setAdapter(eventsListViewAdapter);
                         }
@@ -136,7 +141,7 @@ public class EventsFragment extends Fragment {
             }
         });
 
-        RequestQueue requestQueue= Volley.newRequestQueue(getActivity());
+        RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
 
@@ -164,7 +169,7 @@ public class EventsFragment extends Fragment {
                     System.out.println(descriptionGet);
                     arrayList.add(new EventsListContent(titleGet,dateGet,urlGet,descriptionGet));
                 }
-                eventsListViewAdapter=new EventsListViewAdapter(getActivity());
+                eventsListViewAdapter=new EventsListViewAdapter(this);
                 eventsListViewAdapter.setContentArrayList(arrayList);
                 if(listView!=null){
                     listView.setAdapter(eventsListViewAdapter);
@@ -172,7 +177,7 @@ public class EventsFragment extends Fragment {
 
             }
             else {
-                Toast.makeText(getActivity(), "No Data To Display!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "No Data To Display!", Toast.LENGTH_SHORT).show();
             }
         } catch (JSONException e) {
             e.printStackTrace();

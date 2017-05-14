@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.ace.pardeep.org.acev2.NotificationShowingActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary_dark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"/>
+
+
+    </FrameLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textViewNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:textIsSelectable="true"
+        android:editable="false"
+        android:autoText="true"
+        android:autoLink="web"
+        android:textColorLink="@android:color/holo_blue_light"
+        android:linksClickable="true"
+        android:textColor="@android:color/black"
+        android:text="Hello"/>
+</LinearLayout>
+</LinearLayout>

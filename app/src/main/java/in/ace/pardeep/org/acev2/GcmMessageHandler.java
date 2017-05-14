@@ -12,6 +12,8 @@ import android.util.Log;
 
 import com.google.android.gms.gcm.GcmListenerService;
 
+import java.util.Random;
+
 /**
  * Created by hp 8 on 22-03-2016.
  */
@@ -27,24 +29,29 @@ public class GcmMessageHandler extends GcmListenerService {
     }
 
     private void createNotification(String message) {
-        Intent intent=new Intent(this,HomeScreen.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent=PendingIntent.getActivities(this, 0, new Intent[]{intent}, PendingIntent.FLAG_ONE_SHOT);
+        Intent intent=new Intent(this,NotificationShowingActivity.class);
+        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("message",message);
+        Random numb=new Random();
+
+        PendingIntent pendingIntent=PendingIntent.getActivities(this,numb.nextInt() , new Intent[]{intent}, PendingIntent.FLAG_ONE_SHOT);
+
+
 
         PendingIntent contentIntent = PendingIntent.getActivity(
                 getApplicationContext(),
                 0,
                 new Intent(),
-                PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent.FLAG_CANCEL_CURRENT);
         //PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 
        /* NotificationCompat.InboxStyle notification=new NotificationCompat.InboxStyle();
         notification.setBigContentTitle(message);*/
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder=  new NotificationCompat.Builder(this);
-               notificationBuilder .setSmallIcon(R.drawable.cloud)
+               notificationBuilder .setSmallIcon(R.drawable.ic_launcher_notify)
                 .setTicker("Ace")
-                .setContentTitle("Ace Notification")
+                .setContentTitle("Ambala College Of Engineering And Applied Research")
                 .setContentText(message)
                 .setStyle(new android.support.v4.app.NotificationCompat.BigTextStyle().bigText(message))
                 .setAutoCancel(true)
@@ -69,7 +76,7 @@ public class GcmMessageHandler extends GcmListenerService {
 
 
         NotificationManager notificationManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(0,notificationBuilder.build());
+        notificationManager.notify(numb.nextInt(),notificationBuilder.build());
 
 
     }

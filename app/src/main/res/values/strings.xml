@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AceV2</string>
+    <string name="appname">ACE</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -17,7 +17,7 @@
     <string name="title_activity_detail_activity_about_us">DetailActivityAboutUs</string>
     <string name="aboutUs"><b><h3>About Us</h3>h3></b></string>
     <string name="userName"><b>Username</b></string>
-    <string name="footer"><b>&#169; ACE 2016</b></string>
+    <string name="footer"><b>&#169; ACE 2017</b></string>
     <string name="title_activity_courses_offered">CoursesOffered</string>
     <string name="title_activity_student_profile">StudentProfile</string>
     <string name="title_activity_admin_login">AdminLogin</string>
@@ -41,4 +41,11 @@
     <string name="contact_no">0171-2821833, 9996815503, 9355745503, 9896266033 </string>
     <string name="title_activity_admissions_sub_activities">AdmissionsSubActivities</string>
     <string name="title_activity_gallery_ace">GalleryAceActivity</string>
+    <string name="collegeName">Ambala College Of Engineering </string>
+    <string name="title_activity_placements">Placements</string>
+    <string name="title_activity_events">Events</string>
+    <string name="title_activity_news">News</string>
+    <string name="title_activity_notices">Notices</string>
+    <string name="title_activity_notification_showing">NotificationShowingActivity</string>
+    <string name="title_activity_important_links">ImportantLinks</string>
 </resources>

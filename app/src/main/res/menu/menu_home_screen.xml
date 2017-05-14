@@ -14,5 +14,6 @@
     </item>-->
     <item
         android:id="@+id/admin"
-        android:title="Admin Message"></item>
+        android:title="About Us"></item>
+
 </menu>
