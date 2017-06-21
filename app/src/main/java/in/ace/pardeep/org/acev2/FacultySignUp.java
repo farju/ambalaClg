@@ -177,7 +177,7 @@ public class FacultySignUp extends Fragment {
         JSONObject jsonObject=new JSONObject(hashMap);
         System.out.println(jsonObject);
 
-        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST,"http://aceapp-pardeep16.rhcloud.com/faculty/api/faculty/signup",jsonObject, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST,"http://139.59.74.116:3000/faculty/api/faculty/signup",jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 progressDialog.dismiss();

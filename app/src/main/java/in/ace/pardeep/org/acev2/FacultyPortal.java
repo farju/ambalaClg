@@ -127,7 +127,7 @@ public class FacultyPortal extends AppCompatActivity implements View.OnClickList
         hashMap.put("password",passwordLogin);
 
         JSONObject jsonObject=new JSONObject(hashMap);
-        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST,"http://aceapp-pardeep16.rhcloud.com/faculty/api/login",jsonObject, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST,"http://139.59.74.116:3000/faculty/api/login",jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 progressDialog.dismiss();

@@ -5,14 +5,14 @@ package in.ace.pardeep.org.acev2;
  */
 public class ScriptUrl {
 
-    public static String placementUrl="http://aceapp-pardeep16.rhcloud.com/list/placementlist?token="+ContstantsTokens.getPlacementToken();
-    private static String noticeUrl="http://aceapp-pardeep16.rhcloud.com/list/noticelist";
+    public static String placementUrl="http://139.59.74.116:3000/list/placementlist?token="+ContstantsTokens.getPlacementToken();
+    private static String noticeUrl="http://139.59.74.116:3000/list/noticelist";
     private static String studentDataBaseUrl="http://xdeveloper.royalwebhosting.net/StudentForm.php";
     private static String dataManageer="http://xdeveloper.royalwebhosting.net/manageData.php";
     private static String placementListUpdate="http://xdeveloper.royalwebhosting.net/placement.php";
-    private static String syllabusBtechUrl="http://aceapp-pardeep16.rhcloud.com/academic/syllabus";
-    private static String academicCalenderUrl="http://aceapp-pardeep16.rhcloud.com/academic/calender";
-    private static String impLinks="http://aceapp-pardeep16.rhcloud.com/api/getLinks";
+    private static String syllabusBtechUrl="http://139.59.74.116:3000/academic/syllabus";
+    private static String academicCalenderUrl="http://139.59.74.116:3000/academic/calender";
+    private static String impLinks="http://139.59.74.116:3000/api/getLinks";
 
     private static String newsUrl="http://aceapp-pardeep16.rhcloud.com/list/api/news";
 
@@ -32,7 +32,7 @@ public class ScriptUrl {
         ScriptUrl.impLinks = impLinks;
     }
 
-    private static String eventsGetUrl="http://aceapp-pardeep16.rhcloud.com/list/events";
+    private static String eventsGetUrl="http://139.59.74.116:3000/list/events";
 
     public ScriptUrl() {
     }

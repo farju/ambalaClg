@@ -65,7 +65,7 @@ public class UploadAssignmentFragment extends Fragment {
 
         sharedPreferences=getActivity().getSharedPreferences(FacultyPortal.getPrefFaculty(), 0);
         facultyId=sharedPreferences.getString("facultyid",null);
-        LoadUrl="http://aceapp-pardeep16.rhcloud.com/faculty/api/uploadassignment?apiKey=e4873a6c0493e1fccb00c82f481b59169c51107c5542e449870ad5ce2add7895"+"&facultyId="+facultyId;
+        LoadUrl="http://139.59.74.116:3000/faculty/api/uploadassignment?apiKey=e4873a6c0493e1fccb00c82f481b59169c51107c5542e449870ad5ce2add7895"+"&facultyId="+facultyId;
 
 
        /* if(!facultyId.equalsIgnoreCase("")){

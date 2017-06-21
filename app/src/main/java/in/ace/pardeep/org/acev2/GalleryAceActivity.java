@@ -32,7 +32,7 @@ public class GalleryAceActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
 
     View view;
-    private static String LoadUrl = "http://aceapp-pardeep16.rhcloud.com/api/gallery";
+    private static String LoadUrl = "http://139.59.74.116:3000/api/gallery";
 
 
     @Override

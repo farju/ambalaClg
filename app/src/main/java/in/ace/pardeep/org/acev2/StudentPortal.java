@@ -165,7 +165,7 @@ public class StudentPortal extends AppCompatActivity {
         JSONObject jsonObject=new JSONObject(hashMap);
 
 
-        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST,"http://aceapp-pardeep16.rhcloud.com/student/api/login",jsonObject, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST,"http://139.59.74.116:3000/student/api/login",jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 progressDialog.dismiss();

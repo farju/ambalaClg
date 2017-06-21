@@ -220,7 +220,7 @@ public class ApplyOnline extends AppCompatActivity implements View.OnClickListen
 System.out.println(jobCancel);
         System.out.println(jsonObject);
 
-        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST,"http://aceapp-pardeep16.rhcloud.com/mail/sendmail",jsonObject, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST,"http://139.59.74.116:3000/mail/sendmail",jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 progressDialog.dismiss();

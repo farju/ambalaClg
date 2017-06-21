@@ -146,17 +146,17 @@ public class AdmissionFragment extends Fragment {
             public void onClick(DialogInterface dialog, int position) {
                 switch (position) {
                     case 0:
-                        FeesActivity.setLoadUrl("http://aceapp-pardeep16.rhcloud.com/api/fees?type=annual");
+                        FeesActivity.setLoadUrl("http://139.59.74.116:3000/api/fees?type=annual");
                         FeesActivity.setUpperText("Tution Fee");
                         startActivity(new Intent(getActivity(), FeesActivity.class));
                         break;
                     case 1:
-                        FeesActivity.setLoadUrl("http://aceapp-pardeep16.rhcloud.com/api/fees?type=bus");
+                        FeesActivity.setLoadUrl("http://139.59.74.116:3000/api/fees?type=bus");
                         FeesActivity.setUpperText("Bus Fee");
                         startActivity(new Intent(getActivity(), FeesActivity.class));
                         break;
                     case 2:
-                        FeesActivity.setLoadUrl("http://aceapp-pardeep16.rhcloud.com/api/fees?type=hostel");
+                        FeesActivity.setLoadUrl("http://139.59.74.116:3000/api/fees?type=hostel");
                         FeesActivity.setUpperText("Hostel Fee");
                         startActivity(new Intent(getActivity(), FeesActivity.class));
                         break;

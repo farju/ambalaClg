@@ -159,7 +159,7 @@ checkConnectivity();
         sharedPreferences=getActivity().getSharedPreferences(StudentPortal.getSharedPrefProfile(), 0);
         String department=sharedPreferences.getString("department", null);
         String semester=sharedPreferences.getString("semester",null);
-        String url="http://aceapp-pardeep16.rhcloud.com/student/api/assignments?semester="+semester+"&deptId="+department;
+        String url="http://139.59.74.116:3000/student/api/assignments?semester="+semester+"&deptId="+department;
 
         System.out.println(url);
 
