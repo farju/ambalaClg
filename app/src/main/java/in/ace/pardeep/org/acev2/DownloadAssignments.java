@@ -8,12 +8,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +45,7 @@ import java.util.ArrayList;
  */
 public class DownloadAssignments extends Fragment implements DownloadAssignmentsAdapter.CustomButtonListener {
 
+    private static final int PERMISSION_REQUEST_CODE =1 ;
     View view;
 
     private long enqueue;
@@ -114,6 +119,23 @@ public class DownloadAssignments extends Fragment implements DownloadAssignments
           /* // }
         });*/
 
+        if (Build.VERSION.SDK_INT >= 23)
+        {
+            if (checkPermission())
+            {
+                // Code for above or equal 23 API Oriented Device
+                // Your Permission granted already .Do next code
+            } else {
+                requestPermission(); // Code for permission
+            }
+        }
+        else
+        {
+
+            // Code for Below 23 API Oriented Device
+            // Do next code
+        }
+
 
         listView=(ListView)view.findViewById(R.id.listViewAssignments);
         buttonToBack=(Button)view.findViewById(R.id.backButton);
@@ -148,6 +170,24 @@ checkConnectivity();
                 sendRequestToServer();
             }
         });
+    }
+
+    private boolean checkPermission() {
+        int result = ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (result == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void requestPermission() {
+
+        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            //Toast.makeText(Your_Activity.this, "Write External Storage permission allows us to do store images. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
+        } else {
+            ActivityCompat.requestPermissions(getActivity(), new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
+        }
     }
 
     private void sendRequestToServer() {
@@ -259,6 +299,23 @@ checkConnectivity();
         checkConnectivity();
 
         if(isConnected) {
+
+            if (Build.VERSION.SDK_INT >= 23)
+            {
+                if (checkPermission())
+                {
+                    // Code for above or equal 23 API Oriented Device
+                    // Your Permission granted already .Do next code
+                } else {
+                    requestPermission(); // Code for permission
+                }
+            }
+            else
+            {
+
+                // Code for Below 23 API Oriented Device
+                // Do next code
+            }
 
             String servicestring = Context.DOWNLOAD_SERVICE;
             downloadManager = (DownloadManager) getActivity().getSystemService(servicestring);
