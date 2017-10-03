@@ -4,5 +4,5 @@ Ambla College Android App :- AceApp is a college app that provides all the facil
 <h2>Download App from Play Store</h2>
 
 <a href="https://play.google.com/store/apps/details?id=in.ace.pardeep.org.acev2&hl=en">
-  <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
+  <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width=350px height=150px />
   </a>
